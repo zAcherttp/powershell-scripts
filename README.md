@@ -1,119 +1,94 @@
 # PowerShell Scripts Collection 🚀
 
-A curated collection of useful PowerShell scripts generated with AI assistance to automate various Windows administration and utility tasks.
+A curated collection of useful PowerShell scripts generated with AI to automate various Windows administration and utility tasks.
 
-## 📋 Table of Contents
+## Repository Structure
 
-- [Scripts Overview](#scripts-overview)
-- [Prerequisites](#prerequisites)
-- [Usage](#usage)
-- [Script Descriptions](#script-descriptions)
-- [Contributing](#contributing)
-- [Disclaimer](#disclaimer)
+This repository follows modular development practices with each script organized in its own dedicated folder:
 
-## 📦 Scripts Overview
+```text
+PowerShell/
+├── {script_name}/
+│   ├── script.ps1
+│   ├── README.md
+│   ├── todo.md
+│   └── completed.md
+├── README.md
+```
 
-This repository contains PowerShell scripts designed to help with:
+## 🛠️ Development Philosophy
 
-- System administration
-- File management
-- Windows utilities
-- Automation tasks
-- System monitoring and reporting
+This repository emphasizes:
 
-## 🔧 Prerequisites
+- **Modular Organization**: Each script in its own folder with complete documentation
+- **Task-Driven Development**: Using todo.md and completed.md for progress tracking
+- **Interactive Design**: Scripts prioritize user interaction and real-time feedback
+- **Quality Standards**: Comprehensive error handling, testing, and documentation
 
-- Windows PowerShell 5.1 or PowerShell Core 7.x
-- Administrator privileges (required for some scripts)
-- Execution policy set to allow script execution:
-  ```powershell
-  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-  ```
+## 🚀 Quick Start
 
-## 🚀 Usage
-
-1. Clone this repository:
+1. **Clone the repository**:
 
    ```powershell
    git clone <repository-url>
    cd Powershell
    ```
 
-2. Review the script you want to use before execution
-3. Run scripts with appropriate permissions:
+2. **Navigate to a script folder**:
+
    ```powershell
+   cd clean-web-dev-directories
+   # or
+   cd check-installed-programs
+   ```
+
+3. **Read the script's README.md** for detailed usage instructions
+
+4. **Run with appropriate permissions**:
+
+   ```powershell
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
    .\script-name.ps1
    ```
 
-## 📝 Script Descriptions
+## 📋 Prerequisites
 
-### `check_installed_programs.ps1`
+- Windows PowerShell 5.1 or PowerShell Core 7.x
+- Execution policy configured to allow script execution
+- Administrator privileges (required for some scripts)
 
-**Purpose**: Comprehensive Windows program inventory tool
+## 📖 Documentation
 
-**Features**:
+- **Script-specific documentation**: See individual README.md files in each script folder
+- **Development guidelines**: See `guide.instructions.md`
+- **Task tracking**: Each script folder contains todo.md and completed.md files
 
-- Scans Windows registry for installed programs
-- Retrieves Windows Store apps
-- Uses WMI for additional program detection
-- Generates both text and CSV reports
-- Provides summary by drive and publisher
-- Removes duplicates and consolidates information
+## 🤖 AI-Generated & Enhanced
 
-**Output**:
+These scripts are generated using AI with focus on:
 
-- Text report: `%USERPROFILE%\Desktop\InstalledPrograms.txt`
-- CSV report: `%USERPROFILE%\Desktop\InstalledPrograms.csv`
-
-**Usage**:
-
-```powershell
-.\check_installed_programs.ps1
-```
-
-**Requirements**:
-
-- No special permissions required
-- May take several minutes to complete due to WMI queries
-
----
-
-## 🤖 AI Generation
-
-These scripts were generated and refined using AI assistance to ensure:
-
-- Best practices in PowerShell scripting
-- Error handling and robustness
-- Comprehensive functionality
-- Clear documentation and comments
-
-## ⚠️ Disclaimer
-
-- **Test First**: Always test scripts in a non-production environment first
-- **Review Code**: Examine script contents before execution
-- **Backup Data**: Create backups before running scripts that modify system settings
-- **Admin Rights**: Some scripts may require administrator privileges
-- **Use at Your Own Risk**: While these scripts are designed to be safe, use them at your own discretion
+- PowerShell best practices and modern patterns
+- Robust error handling and user experience
+- Comprehensive testing and validation
+- Clear documentation and maintainability
 
 ## 🤝 Contributing
 
-Feel free to:
+When contributing:
 
-- Report issues or bugs
-- Suggest improvements
-- Add new useful scripts
-- Improve documentation
+1. Follow the patterns established in `guide.instructions.md`
+2. Create new scripts in dedicated folders with complete documentation
+3. Maintain todo.md and completed.md for task tracking
+4. Ensure scripts are interactive and user-friendly
 
-## 📄 License
+## ⚠️ Important Notes
 
-This collection is provided as-is for educational and utility purposes. Please review and understand each script before use in production environments.
-
-## 🏷️ Tags
-
-`powershell` `windows` `automation` `scripts` `admin-tools` `system-utilities` `ai-generated`
+- **Always test scripts** in non-production environments first
+- **Review code** before execution
+- **Backup important data** before running system-modifying scripts
+- Scripts are provided as-is for educational and utility purposes
 
 ---
 
-**Last Updated**: July 2025  
-**PowerShell Version Tested**: 5.1 / 7.x  
-**Windows Version Tested**: Windows 10/11
+**PowerShell Versions**: 5.1 / 7.x  
+**Windows Compatibility**: Windows 10/11
